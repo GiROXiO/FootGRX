@@ -7,6 +7,7 @@ from src.backend.models.league.LeagueMatch import LeagueMatch
 from src.backend.models.team.Team import Team
 from src.backend.models.Matchweek import Matchweek
 from src.backend.models.season.Season import Season
+import datetime
 
 def main():
     #Creamos una temporada
@@ -41,7 +42,7 @@ def main():
     brighton = Team("Brighton", "BHA", "England")
     bournemouth = Team("Bournemouth", "BOU", "England")
     brentford = Team("Brentford", "BRE", "England")
-    fullham = Team("Fullham", "FUL", "England")
+    fulham = Team("Fulham", "FUL", "England")
     cryPalace = Team("Crystal Palace", "CRY", "England")
     everton = Team("Everton", "EVE", "England")
     westHam = Team("West Ham", "WHU", "England")
@@ -53,10 +54,7 @@ def main():
     southampton = Team("Southampton", "SOU", "England")
     
     #Creamos las jornadas
-    if premier2024_25:
-        for i in range(1,39):
-            id = f"PRE{season2024_25.year}MW{i:02}"
-            premier2024_25.add_matchweek(Matchweek(id, premier2024_25, i))
+    premier2024_25.create_matchweeks()
     
     #Añadimos los equipos a la temporada
     if premier2024_25:
@@ -70,7 +68,7 @@ def main():
         premier2024_25.add_team(brighton)
         premier2024_25.add_team(bournemouth)
         premier2024_25.add_team(brentford)
-        premier2024_25.add_team(fullham)
+        premier2024_25.add_team(fulham)
         premier2024_25.add_team(cryPalace)
         premier2024_25.add_team(everton)
         premier2024_25.add_team(westHam)
@@ -82,17 +80,31 @@ def main():
         premier2024_25.add_team(southampton)
     
     #Probamos que todo se haya añadido correctamente en la temporada 2024/25
-    season2024_25.leagues.show()
+    #season2024_25.leagues.show()
     premierLeague.seasons.show()
     
-    print("\nAca probamos accediendo a la variable premier2024_25")
+    #print("\nAca probamos accediendo a la variable premier2024_25")
     premier2024_25.teams.show()
     
-    print("\nAca probamos accediendo directamente a la lista guardada en season2024/25")
-    season2024_25.leagues.find_node(lambda x: x.id.lower() == "PRE2024_25".lower()).get_value().teams.show()
+    #print("\nAca probamos accediendo directamente a la lista guardada en season2024/25")
+    #season2024_25.leagues.find_node(lambda x: x.id.lower() == "PRE2024_25".lower()).get_value().#teams.show()
 
-
-
+    #Creamos los partidos de la primera jornada de la temporada
+    mw1 = premier2024_25.find_matchweeks(1).get_value()
+    
+    if mw1:
+        premier2024_25.add_match(manUnited, fulham, mw1, datetime.date(2024, 8, 16))
+        premier2024_25.add_match(ipswich, liverpool, mw1, datetime.date(2024, 8, 17))
+        premier2024_25.add_match(arsenal, wolves, mw1, datetime.date(2024, 8, 17))
+        premier2024_25.add_match(everton, brighton, mw1, datetime.date(2024, 8, 17))
+        premier2024_25.add_match(newcastle, southampton, mw1, datetime.date(2024, 8, 17))
+        premier2024_25.add_match(notForest, bournemouth, mw1, datetime.date(2024, 8, 17))
+        premier2024_25.add_match(westHam, astVilla, mw1, datetime.date(2024, 8, 17))
+        premier2024_25.add_match(brentford, cryPalace, mw1, datetime.date(2024, 8, 18))
+        premier2024_25.add_match(chelsea, manCity, mw1, datetime.date(2024, 8, 18))
+        premier2024_25.add_match(leicester, tottenham, mw1, datetime.date(2024, 8, 19))
+        print("\n")
+        mw1.matches.show()
 
 if __name__ == "__main__":
     main()

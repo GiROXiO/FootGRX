@@ -31,4 +31,8 @@ class TeamSeason:
             print("The match has already added")
             return False
         self.matches.add(match)
+        print(f"MATCH {match.id} ADDED SUCCESFULY TO {self.team.name} IN SEASON {self.id}")
         return True
+
+    def __str__(self):
+        return f"Seaon {self.season.year} of the team {self.team.name}"

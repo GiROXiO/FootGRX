@@ -13,6 +13,18 @@ class Matchweek:
         self.league = league
         self.matchweek = matchweek
         self.matches: DoubleLinkedCircularList["LeagueMatch"] = DoubleLinkedCircularList["LeagueMatch"]()
-    
+
+    def add_match(self, match: LeagueMatch):
+        try:
+            if self.matches.find_node(lambda x: x.id.lower() == match.id.lower()):
+                print(f"The match {match.id} has already been added to the matchweek {self.id}")
+                return False
+            self.matches.add(match)
+            print(f"THE MATCH {match.id} WAS SUCCESFULLY ADDED TO THE MATCHWEEK {self.id}")
+            return True
+        except Exception as e:
+            print(f"AN ERROR OCCURRED WHILE ADDING THE MATCH: {e}")
+            return False
+
     def __str__(self):
         return f"Matchweek {self.matchweek} of the league {self.league.league.name} on season {self.league.season.year}"

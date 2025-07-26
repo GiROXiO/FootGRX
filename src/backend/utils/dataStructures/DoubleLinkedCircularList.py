@@ -99,7 +99,7 @@ class DoubleLinkedCircularList(Generic[T]):
                     break
         self.size = index
 
-    def get_by_index(self, index: int) -> Any:
+    def get_by_index(self, index: int) -> Optional[Node[T]]:
         print("Getting index: " + str(index))
         if self.is_empty():
             print("List is empty, cannot get index")
@@ -114,7 +114,7 @@ class DoubleLinkedCircularList(Generic[T]):
         temp = None
         realized_steps = 0
         
-        while current is not None and realized_steps < index:
+        while current is not None and realized_steps <= index:
             temp = current
             for _ in range(step):
                 if current is None:
@@ -135,4 +135,5 @@ class DoubleLinkedCircularList(Generic[T]):
                 return temp
             temp = temp.get_prev()
         
+        print(f"INDEX {index} NOT FOUND")
         return None
