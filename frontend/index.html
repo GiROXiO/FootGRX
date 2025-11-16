@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Estadísticas deportivas de las 5 grandes ligas de Europa">
+    <title>FootGRX - Estadísticas de las Grandes Ligas Europeas</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1>FootGRX</h1>
+                <span class="subtitle">Estadísticas de Europa</span>
+            </div>
+            <nav class="nav">
+                <button class="menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-list">
+                    <li><a href="#home" class="nav-link active">Inicio</a></li>
+                    <li><a href="#premier-league" class="nav-link">Premier League</a></li>
+                    <li><a href="#la-liga" class="nav-link">La Liga</a></li>
+                    <li><a href="#serie-a" class="nav-link">Serie A</a></li>
+                    <li><a href="#bundesliga" class="nav-link">Bundesliga</a></li>
+                    <li><a href="#ligue-1" class="nav-link">Ligue 1</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2 class="hero-title">Las 5 Grandes Ligas de Europa</h2>
+                <p class="hero-description">Explora estadísticas en tiempo real de las mejores competiciones de fútbol del mundo</p>
+                <div class="hero-stats">
+                    <div class="stat-card">
+                        <span class="stat-number" data-target="5">0</span>
+                        <span class="stat-label">Ligas</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number" data-target="98">0</span>
+                        <span class="stat-label">Equipos</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number" data-target="1824">0</span>
+                        <span class="stat-label">Partidos/Temporada</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Premier League Section -->
+    <section id="premier-league" class="league-section premier">
+        <div class="container">
+            <div class="league-header">
+                <h2 class="league-title">Premier League</h2>
+                <span class="league-country">Inglaterra</span>
+            </div>
+            <div class="league-content">
+                <div class="league-info">
+                    <div class="info-card">
+                        <h3>Acerca de la Liga</h3>
+                        <p>La Premier League es la máxima categoría del fútbol inglés. Fundada en 1992, es considerada una de las mejores ligas del mundo por su competitividad y calidad.</p>
+                        <ul class="stats-list">
+                            <li><strong>Equipos:</strong> 20</li>
+                            <li><strong>Partidos por temporada:</strong> 380</li>
+                            <li><strong>País:</strong> Inglaterra</li>
+                            <li><strong>Fundación:</strong> 1992</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="league-table">
+                    <h3>Clasificación Actual</h3>
+                    <table class="standings-table">
+                        <thead>
+                            <tr>
+                                <th>Pos</th>
+                                <th>Equipo</th>
+                                <th>PJ</th>
+                                <th>PG</th>
+                                <th>PE</th>
+                                <th>PP</th>
+                                <th>Pts</th>
+                            </tr>
+                        </thead>
+                        <tbody id="premier-standings">
+                            <tr>
+                                <td>1</td>
+                                <td>Liverpool</td>
+                                <td>11</td>
+                                <td>9</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>28</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Manchester City</td>
+                                <td>11</td>
+                                <td>7</td>
+                                <td>2</td>
+                                <td>2</td>
+                                <td>23</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Arsenal</td>
+                                <td>11</td>
+                                <td>6</td>
+                                <td>3</td>
+                                <td>2</td>
+                                <td>21</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Chelsea</td>
+                                <td>11</td>
+                                <td>5</td>
+                                <td>4</td>
+                                <td>2</td>
+                                <td>19</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>Brighton</td>
+                                <td>11</td>
+                                <td>5</td>
+                                <td>3</td>
+                                <td>3</td>
+                                <td>18</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- La Liga Section -->
+    <section id="la-liga" class="league-section laliga">
+        <div class="container">
+            <div class="league-header">
+                <h2 class="league-title">La Liga</h2>
+                <span class="league-country">España</span>
+            </div>
+            <div class="league-content">
+                <div class="league-info">
+                    <div class="info-card">
+                        <h3>Acerca de la Liga</h3>
+                        <p>La Liga española es conocida por su técnica y calidad de juego. Ha sido hogar de algunos de los mejores jugadores de la historia del fútbol.</p>
+                        <ul class="stats-list">
+                            <li><strong>Equipos:</strong> 20</li>
+                            <li><strong>Partidos por temporada:</strong> 380</li>
+                            <li><strong>País:</strong> España</li>
+                            <li><strong>Fundación:</strong> 1929</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="league-table">
+                    <h3>Clasificación Actual</h3>
+                    <table class="standings-table">
+                        <thead>
+                            <tr>
+                                <th>Pos</th>
+                                <th>Equipo</th>
+                                <th>PJ</th>
+                                <th>PG</th>
+                                <th>PE</th>
+                                <th>PP</th>
+                                <th>Pts</th>
+                            </tr>
+                        </thead>
+                        <tbody id="laliga-standings">
+                            <tr>
+                                <td>1</td>
+                                <td>Barcelona</td>
+                                <td>11</td>
+                                <td>10</td>
+                                <td>0</td>
+                                <td>1</td>
+                                <td>30</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Real Madrid</td>
+                                <td>11</td>
+                                <td>7</td>
+                                <td>3</td>
+                                <td>1</td>
+                                <td>24</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Atlético Madrid</td>
+                                <td>11</td>
+                                <td>6</td>
+                                <td>3</td>
+                                <td>2</td>
+                                <td>21</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Villarreal</td>
+                                <td>11</td>
+                                <td>5</td>
+                                <td>3</td>
+                                <td>3</td>
+                                <td>18</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>Athletic Bilbao</td>
+                                <td>11</td>
+                                <td>5</td>
+                                <td>2</td>
+                                <td>4</td>
+                                <td>17</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Serie A Section -->
+    <section id="serie-a" class="league-section seriea">
+        <div class="container">
+            <div class="league-header">
+                <h2 class="league-title">Serie A</h2>
+                <span class="league-country">Italia</span>
+            </div>
+            <div class="league-content">
+                <div class="league-info">
+                    <div class="info-card">
+                        <h3>Acerca de la Liga</h3>
+                        <p>La Serie A italiana es reconocida por su énfasis táctico y defensivo. Ha sido el hogar de clubes legendarios y grandes campeones.</p>
+                        <ul class="stats-list">
+                            <li><strong>Equipos:</strong> 20</li>
+                            <li><strong>Partidos por temporada:</strong> 380</li>
+                            <li><strong>País:</strong> Italia</li>
+                            <li><strong>Fundación:</strong> 1929</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="league-table">
+                    <h3>Clasificación Actual</h3>
+                    <table class="standings-table">
+                        <thead>
+                            <tr>
+                                <th>Pos</th>
+                                <th>Equipo</th>
+                                <th>PJ</th>
+                                <th>PG</th>
+                                <th>PE</th>
+                                <th>PP</th>
+                                <th>Pts</th>
+                            </tr>
+                        </thead>
+                        <tbody id="seriea-standings">
+                            <tr>
+                                <td>1</td>
+                                <td>Napoli</td>
+                                <td>11</td>
+                                <td>8</td>
+                                <td>1</td>
+                                <td>2</td>
+                                <td>25</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Inter</td>
+                                <td>11</td>
+                                <td>7</td>
+                                <td>3</td>
+                                <td>1</td>
+                                <td>24</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Atalanta</td>
+                                <td>11</td>
+                                <td>7</td>
+                                <td>1</td>
+                                <td>3</td>
+                                <td>22</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Juventus</td>
+                                <td>11</td>
+                                <td>6</td>
+                                <td>4</td>
+                                <td>1</td>
+                                <td>22</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>Lazio</td>
+                                <td>11</td>
+                                <td>7</td>
+                                <td>1</td>
+                                <td>3</td>
+                                <td>22</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bundesliga Section -->
+    <section id="bundesliga" class="league-section bundesliga">
+        <div class="container">
+            <div class="league-header">
+                <h2 class="league-title">Bundesliga</h2>
+                <span class="league-country">Alemania</span>
+            </div>
+            <div class="league-content">
+                <div class="league-info">
+                    <div class="info-card">
+                        <h3>Acerca de la Liga</h3>
+                        <p>La Bundesliga alemana es conocida por su intensidad, ambiente en los estadios y desarrollo de jóvenes talentos. Es una de las ligas más emocionantes de Europa.</p>
+                        <ul class="stats-list">
+                            <li><strong>Equipos:</strong> 18</li>
+                            <li><strong>Partidos por temporada:</strong> 306</li>
+                            <li><strong>País:</strong> Alemania</li>
+                            <li><strong>Fundación:</strong> 1963</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="league-table">
+                    <h3>Clasificación Actual</h3>
+                    <table class="standings-table">
+                        <thead>
+                            <tr>
+                                <th>Pos</th>
+                                <th>Equipo</th>
+                                <th>PJ</th>
+                                <th>PG</th>
+                                <th>PE</th>
+                                <th>PP</th>
+                                <th>Pts</th>
+                            </tr>
+                        </thead>
+                        <tbody id="bundesliga-standings">
+                            <tr>
+                                <td>1</td>
+                                <td>Bayern München</td>
+                                <td>10</td>
+                                <td>8</td>
+                                <td>2</td>
+                                <td>0</td>
+                                <td>26</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>RB Leipzig</td>
+                                <td>10</td>
+                                <td>6</td>
+                                <td>3</td>
+                                <td>1</td>
+                                <td>21</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Eintracht Frankfurt</td>
+                                <td>10</td>
+                                <td>6</td>
+                                <td>2</td>
+                                <td>2</td>
+                                <td>20</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Bayer Leverkusen</td>
+                                <td>10</td>
+                                <td>5</td>
+                                <td>4</td>
+                                <td>1</td>
+                                <td>19</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>SC Freiburg</td>
+                                <td>10</td>
+                                <td>5</td>
+                                <td>2</td>
+                                <td>3</td>
+                                <td>17</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ligue 1 Section -->
+    <section id="ligue-1" class="league-section ligue1">
+        <div class="container">
+            <div class="league-header">
+                <h2 class="league-title">Ligue 1</h2>
+                <span class="league-country">Francia</span>
+            </div>
+            <div class="league-content">
+                <div class="league-info">
+                    <div class="info-card">
+                        <h3>Acerca de la Liga</h3>
+                        <p>La Ligue 1 francesa es conocida por su capacidad para desarrollar jóvenes talentos y por albergar clubes con gran poder económico.</p>
+                        <ul class="stats-list">
+                            <li><strong>Equipos:</strong> 18</li>
+                            <li><strong>Partidos por temporada:</strong> 306</li>
+                            <li><strong>País:</strong> Francia</li>
+                            <li><strong>Fundación:</strong> 1932</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="league-table">
+                    <h3>Clasificación Actual</h3>
+                    <table class="standings-table">
+                        <thead>
+                            <tr>
+                                <th>Pos</th>
+                                <th>Equipo</th>
+                                <th>PJ</th>
+                                <th>PG</th>
+                                <th>PE</th>
+                                <th>PP</th>
+                                <th>Pts</th>
+                            </tr>
+                        </thead>
+                        <tbody id="ligue1-standings">
+                            <tr>
+                                <td>1</td>
+                                <td>Paris Saint-Germain</td>
+                                <td>11</td>
+                                <td>9</td>
+                                <td>2</td>
+                                <td>0</td>
+                                <td>29</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Monaco</td>
+                                <td>11</td>
+                                <td>7</td>
+                                <td>2</td>
+                                <td>2</td>
+                                <td>23</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Marseille</td>
+                                <td>11</td>
+                                <td>6</td>
+                                <td>2</td>
+                                <td>3</td>
+                                <td>20</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Lille</td>
+                                <td>11</td>
+                                <td>5</td>
+                                <td>3</td>
+                                <td>3</td>
+                                <td>18</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>Lyon</td>
+                                <td>11</td>
+                                <td>5</td>
+                                <td>3</td>
+                                <td>3</td>
+                                <td>18</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>FootGRX</h3>
+                    <p>Tu fuente de estadísticas de las grandes ligas europeas.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Ligas</h4>
+                    <ul>
+                        <li><a href="#premier-league">Premier League</a></li>
+                        <li><a href="#la-liga">La Liga</a></li>
+                        <li><a href="#serie-a">Serie A</a></li>
+                        <li><a href="#bundesliga">Bundesliga</a></li>
+                        <li><a href="#ligue-1">Ligue 1</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contacto</h4>
+                    <p>Email: info@footgrx.com</p>
+                    <p>© 2024 FootGRX. Todos los derechos reservados.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
